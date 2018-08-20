@@ -1,0 +1,300 @@
+//fonts //
+$page-font:"SF-Pro", "Helvetica", sans-serif;
+$page-font-bold: "SF-Pro-bold", "Helvetica", sans-serif;
+$second-font:"Open Sans", "Arial", sans;
+
+//color pallette //
+$whitish:#FAFAFA;
+$black:#2D3136;
+$purple:#674FA1;
+$inspect:rgba(211,233,246,0.4); //This value is used to visualize elements in design guide
+
+// global //
+html, body, header {
+	margin:0;
+	padding:0;
+	font-family:$page-font;
+}
+
+// font-styling //
+h1, h2, h3, p {
+	color:#000000;
+	margin:0 0 15px 0;
+	padding:0;
+}
+
+//--- white text include class .white
+.white {
+	color:#FFFFFF;
+}
+
+.center {
+	text-align:center;
+}
+
+// hover rules //---------
+.hover {
+	-o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+}
+
+/*container and wrapper hierarchy:
+<header> -------------------------(primary page component: header,main,footer,etc)
+	<class="inner-wrapper"> ------(restrains content to 1199px width)
+		<header.container> -------(container for primary page component elements)
+			<child-components> ---(contains p,span,buttons,etc)
+
+wrappers: used hold parent elements in place on page
+containers: are used to hold smaller elements within wrappers */
+
+.inner-wrapper {
+	height:100%;
+	margin:0 auto;
+	padding:17px;
+	max-width:1193px;
+}
+
+
+// header components // ----------(remember to define div as .header-container)
+header {
+	height:477px;
+	width:100%;
+	background-color:black;
+	background-image: url("../../assets/headerphoto.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position:50% 37%;
+}
+
+.header-container {
+	position:relative;
+	top:50%;
+	transform:translateY(-50%);
+}
+
+h1 {
+	font-family:$page-font-bold;
+	font-size:48px;
+	font-weight:bold;
+	line-height:58px;
+	text-align:center;
+}
+
+.header-container p {
+	font-size:20px;
+	font-family:$second-font;
+	text-align:center;
+}
+
+
+// section components // ----------(remember to define div as .section-container)
+
+section { // ----------------------(you must set height for section in order to vertically center the container)
+	height:590px;
+	background-color:$whitish;
+}
+
+h2 {
+	font-family:$page-font-bold;
+	font-size:36px;
+}
+
+.section-container {
+	position:relative;
+	top:50%;
+	transform:translateY(-54%);
+}
+
+.section-sub-container {
+	display:inline-block;
+	margin:100px 10px 0 10px;
+	width:30%;
+}
+
+h3 {
+	font-family:$page-font-bold;
+	font-size:20px;
+}
+
+.section-container p {
+	font-family:$second-font;
+	font-size:16px;
+	line-height:26px;
+}
+
+.section-container a {
+	color:$purple;
+	font-size:16px;
+	top:5px;
+	position:relative;
+	text-decoration:none;
+
+}
+
+
+// large banner section components // -------(these are used for special aside content)
+
+.large-section {
+	height:1000px;
+}
+
+.large-section h2 {
+	font-size:32px;
+}
+
+.large-section p {
+	font-size:16px;
+	margin-bottom:64px;
+}
+
+// card section // ---------(these are used for cards throughout the site)
+
+.card {
+	border: 1px solid #E7E7E7;
+	border-radius: 4px;
+	height:212px;
+	margin:0 auto;
+	max-width:900px;
+}
+
+.card-container {
+	height:80%;
+	margin:0 auto;
+	position:relative;
+	top:50%;
+	transform:translateY(-37%);
+	width:90%;
+}
+
+.card-container h3 {
+	font-size:24px;
+}
+
+.card-container p {
+	font-family:$second-font;
+	font-size:16px;
+	line-height:26px;
+	margin:0 0 26px 0;
+}
+
+.card-container a {
+	top:0;
+}
+
+
+// breakout section components // -------(these are used for special breakout sections)
+
+.breakout-section .image-section {
+	background-color:black;
+	background-image: url("../../assets/headerphoto.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position:center;
+	float:left;
+	height:100%;
+	width:50%;
+}
+
+.breakout-section .purple-section {
+	background-color:$purple;
+	float:right;
+	height:100%;
+	position:relative;
+	width:50%;
+}
+
+.breakout-container {
+	margin:0 auto;
+	position:relative;
+	top:50%;
+	transform:translateY(-54%);
+	width:80%;
+}
+
+.breakout-container p {
+	font-family:$second-font;
+	font-size:16px;
+	line-height:26px;
+}
+
+.breakout-container h2 {
+	font-size:30px;
+}
+
+.breakout-link-container {
+	margin: 32px 0;
+}
+
+.breakout-link {
+	box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.24), inset 0 -1px 0 0 rgba(255,255,255,0.24);
+	height:80px;
+}
+
+.breakout-link p {
+	color:white;
+	font-family:$page-font;
+	font-size:18px;
+	position:relative;
+	top:50%;
+	transform:translateY(-54%);
+}
+
+
+
+
+// banner section components // -------(these are used for special breakout banners)
+
+section.banner {
+	height:362px;
+	width:100%;
+	background-color:black;
+	background-image: url("../../assets/headerphoto.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position:50% 37%;
+}
+
+section .banner-container {
+	position:relative;
+	top:50%;
+	text-align:center;
+	transform:translateY(-60%);
+}
+
+.banner-container h1 {
+	color:white;
+	font-family:$page-font-bold;
+	font-size:32px;
+	line-height:42px;
+	text-align:center;
+}
+
+.banner-container p {
+	color:white;
+	font-size:18px;
+	line-height:30px;
+	font-family:$second-font;
+	text-align:center;
+}
+
+.banner-container button {
+	background:none;
+	border: 1px solid #FFFFFF;
+	border-radius: 4px;
+	color:white;
+	font-family:$page-font;
+	font-size:17px;
+	height:50px;
+	margin-top:10px;
+	min-width:140px;
+}
+
+.banner-container button:hover {
+	background:white;
+	color:black;
+	@extend .hover;
+}
+
+
